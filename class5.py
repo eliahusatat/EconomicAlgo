@@ -43,7 +43,6 @@ def vcg_cheapest_path(graph, source, target):
       # calculate his price
          ans [i] = d.get('weight') + temp_length - length
       i+= 1
-
    print(eg)
    print(ans)
 
