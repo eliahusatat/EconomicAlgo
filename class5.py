@@ -10,7 +10,6 @@ def vcg_cheapest_path(graph, source, target):
     :param graph: a networkx graph object(weighted).
     :param source -the start node
     :param target - the start target
-    :return: True of the graph contains a directed cycle with negative sum of weights; False otherwise.
 
    >>> G = nx.Graph()
    >>> G.add_edge('a', 'b', weight=3)
