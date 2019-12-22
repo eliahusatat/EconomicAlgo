@@ -33,7 +33,7 @@ def values(all_players:str, map_subset_to_cost:dict,num_players ):
 
 	map_player_to_sum_of_marginal_costs = collections.defaultdict(float)
 	num_permutations = 0
-	logger.info("Looping over all permutations of %s", list(all_players))
+	logger.info("Looping over 1000 permutations of %s", list(all_players))
 	# times the number of permutation we want
 	times=1000
 	for i in range(0,times):
