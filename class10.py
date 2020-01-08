@@ -90,5 +90,23 @@ def revers(d):
 
 
 if __name__ == "__main__":
-    (failures,tests) = doctest.testmod(report=True)
-    print ("{} failures, {} tests".format(failures,tests))
+    #(failures,tests) = doctest.testmod(report=True)
+    #print ("{} failures, {} tests".format(failures,tests))
+    """
+    Rafi = 1
+    Shlomo = 2
+    Tomer = 3
+    """
+    A = ObjectMatch ("A",{"Rafi": 1,"Shlomo": 2,"Tomer": 3})
+    B = ObjectMatch("B",{"Tomer": 1,"Rafi": 2,"Shlomo": 3})
+    C = ObjectMatch("C",{"Shlomo": 1,"Tomer": 2,"Rafi": 3})
+    Rafi = ObjectMatch( "Rafi",{"C": 1, "B": 2, "A": 3})
+    Shlomo = ObjectMatch("Shlomo", {"B": 1, "A": 2, "C": 3})
+    Tomer = ObjectMatch("Tomer",{"A": 1, "C": 2, "B": 2})
+    m1 = {Rafi: B, Shlomo : A , Tomer : C}
+    m2 = {Rafi: A, Shlomo: C, Tomer: B}
+    m3 = {Rafi: C, Shlomo: B, Tomer: A}
+    print(check_stability(m1))
+    print(check_stability(m2))
+    print(check_stability(m3))
+
