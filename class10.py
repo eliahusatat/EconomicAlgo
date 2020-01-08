@@ -20,10 +20,9 @@ class ObjectMatch():
 
 def check_stability(Match1):
     """
-    this function gets matching (represent by two dictionary)
+    this function gets matching (represent by dictionary)
     and check if the matching is stable
     :param Match1: Match from boys to girls
-    :param Match2: Match from girls to boys
     :return: if the matching is stable
     >>> Aviva = ObjectMatch ("Aviva",{"Rafi": 1,"Shlomo": 2,"Tomer": 3})
     >>> Batya = ObjectMatch("Batya",{"Rafi": 2,"Shlomo": 1,"Tomer": 3})
@@ -54,7 +53,6 @@ def is_couple_unstable(Match1,first,second):
     """
     this function gets couple and check if the couple is unstable("mearer")
     :param Match1: Match from boys to girls
-    :param Match2: Match from girls to boys
     :param first: the first one in the current couple
     :param second: the second one in the current couple
     :return: if the current couple is unstable
