@@ -96,20 +96,28 @@ if __name__ == "__main__":
     Rafi = 1
     Shlomo = 2
     Tomer = 3
-    """
+    
     A = ObjectMatch ("A",{"Rafi": 1,"Shlomo": 2,"Tomer": 3})
     B = ObjectMatch("B",{"Tomer": 1,"Rafi": 2,"Shlomo": 3})
     C = ObjectMatch("C",{"Shlomo": 1,"Tomer": 2,"Rafi": 3})
     Rafi = ObjectMatch( "Rafi",{"C": 1, "B": 2, "A": 3})
     Shlomo = ObjectMatch("Shlomo", {"B": 1, "A": 2, "C": 3})
-    Tomer = ObjectMatch("Tomer",{"A": 1, "C": 2, "B": 2})
+    Tomer = ObjectMatch("Tomer",{"A": 1, "C": 2, "B": 3})
+    """
+    A = ObjectMatch ("A",{"Tomer": 1,"Shlomo": 2,"Rafi": 3})
+    B = ObjectMatch("B",{"Rafi": 1,"Tomer": 2,"Shlomo": 3})
+    C = ObjectMatch("C",{"Shlomo": 1,"Rafi": 2,"Tomer": 3})
+    Rafi = ObjectMatch( "Rafi",{"A": 1, "C": 2, "B": 3})
+    Shlomo = ObjectMatch("Shlomo", {"B": 1, "A": 2, "C": 3})
+    Tomer = ObjectMatch("Tomer",{"C": 1, "B": 2, "A": 3})
+
     m1 = {Rafi: B, Shlomo : A , Tomer : C}
     m2 = {Rafi: A, Shlomo: C, Tomer: B}
     m3 = {Rafi: C, Shlomo: B, Tomer: A}
-
     m4 = {Rafi: A, Shlomo : B , Tomer : C}
     m5 = {Rafi: B, Shlomo: C, Tomer: A}
     m6 = {Rafi: C, Shlomo: A, Tomer: B}
+    #print(is_couple_unstable(m6,Tomer,C))
     print(check_stability(m1))
     print(check_stability(m2))
     print(check_stability(m3))
