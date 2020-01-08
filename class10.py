@@ -106,7 +106,27 @@ if __name__ == "__main__":
     m1 = {Rafi: B, Shlomo : A , Tomer : C}
     m2 = {Rafi: A, Shlomo: C, Tomer: B}
     m3 = {Rafi: C, Shlomo: B, Tomer: A}
+
+    m4 = {Rafi: A, Shlomo : B , Tomer : C}
+    m5 = {Rafi: B, Shlomo: C, Tomer: A}
+    m6 = {Rafi: C, Shlomo: A, Tomer: B}
     print(check_stability(m1))
     print(check_stability(m2))
     print(check_stability(m3))
+
+    print(check_stability(m4))
+    print(check_stability(m5))
+    print(check_stability(m6))
+
+    """
+    True
+    True
+    True
+    
+    the couple: Rafi,B is unstable couple
+    False
+    the couple: Shlomo,A is unstable couple
+    False
+    True
+    """
 
