@@ -1,2 +1,2 @@
 # EconomicAlgo
-Economic Algo practic
+Economic Algo practice
